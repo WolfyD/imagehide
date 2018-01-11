@@ -79,5 +79,22 @@ namespace imagehide.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Image is transparency capable image format with uniformly 100% opacity (Alpha value of 255)
+        ///message is converted to integer numbers and numbers and subtracted from the pixels Alpha value.
+        ///
+        ///
+        ///
+        ///HEADER:			(Line 1)
+        ///	Message type?					-&gt;	INTEGER	1-255	-&gt;	1px			--	Indicates what type of data is contained in the message (So far 1 for cleartext, 2 for binary, 3 for morse, 4 for binary text)
+        ///	How many pics?					-&gt;	INTEGER	1-255	-&gt;	1px			--	Indicates # of images used for whole message
+        ///	Which pic is this?				-&gt; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string doc {
+            get {
+                return ResourceManager.GetString("doc", resourceCulture);
+            }
+        }
     }
 }

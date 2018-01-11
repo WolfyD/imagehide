@@ -31,32 +31,34 @@
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.tc_Tabs_Main = new System.Windows.Forms.TabControl();
 			this.tp_Encode = new System.Windows.Forms.TabPage();
-			this.tp_Decode = new System.Windows.Forms.TabPage();
+			this.btn_BrowseOutput1 = new System.Windows.Forms.Button();
+			this.tb_OutputFolder1 = new System.Windows.Forms.TextBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.btn_HideData = new System.Windows.Forms.Button();
+			this.tc_Tabs_Data = new System.Windows.Forms.TabControl();
+			this.tp_Datatype_Text = new System.Windows.Forms.TabPage();
+			this.btn_BrowseDataText = new System.Windows.Forms.Button();
+			this.rtb_DataText = new System.Windows.Forms.RichTextBox();
+			this.tp_Datatype_Binary = new System.Windows.Forms.TabPage();
+			this.tp_Datatype_Morse = new System.Windows.Forms.TabPage();
+			this.tp_Datatype_BinaryText = new System.Windows.Forms.TabPage();
+			this.gb_Images = new System.Windows.Forms.GroupBox();
+			this.pb_Picture = new System.Windows.Forms.PictureBox();
+			this.btn_RemoveImage = new System.Windows.Forms.Button();
 			this.btn_OpenImage = new System.Windows.Forms.Button();
 			this.lv_ImagesList = new System.Windows.Forms.ListView();
 			this.ch_Index = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.ch_ImageName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.ch_Dimentions = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.gb_Images = new System.Windows.Forms.GroupBox();
-			this.btn_RemoveImage = new System.Windows.Forms.Button();
-			this.pb_Picture = new System.Windows.Forms.PictureBox();
-			this.tc_Tabs_Data = new System.Windows.Forms.TabControl();
-			this.tp_Datatype_Text = new System.Windows.Forms.TabPage();
-			this.tp_Datatype_Binary = new System.Windows.Forms.TabPage();
-			this.btn_HideData = new System.Windows.Forms.Button();
-			this.label1 = new System.Windows.Forms.Label();
-			this.tb_OutputFolder1 = new System.Windows.Forms.TextBox();
-			this.btn_BrowseOutput1 = new System.Windows.Forms.Button();
-			this.tp_Datatype_Morse = new System.Windows.Forms.TabPage();
-			this.tp_Datatype_BinaryText = new System.Windows.Forms.TabPage();
-			this.rtb_DataText = new System.Windows.Forms.RichTextBox();
-			this.btn_BrowseDataText = new System.Windows.Forms.Button();
+			this.tp_Decode = new System.Windows.Forms.TabPage();
+			this.lbl_ImageInfo = new System.Windows.Forms.Label();
+			this.btn_Check = new System.Windows.Forms.Button();
 			this.tc_Tabs_Main.SuspendLayout();
 			this.tp_Encode.SuspendLayout();
-			this.gb_Images.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pb_Picture)).BeginInit();
 			this.tc_Tabs_Data.SuspendLayout();
 			this.tp_Datatype_Text.SuspendLayout();
+			this.gb_Images.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pb_Picture)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -94,93 +96,44 @@
 			this.tp_Encode.Text = "Encode";
 			this.tp_Encode.UseVisualStyleBackColor = true;
 			// 
-			// tp_Decode
+			// btn_BrowseOutput1
 			// 
-			this.tp_Decode.Location = new System.Drawing.Point(4, 22);
-			this.tp_Decode.Name = "tp_Decode";
-			this.tp_Decode.Padding = new System.Windows.Forms.Padding(3);
-			this.tp_Decode.Size = new System.Drawing.Size(449, 388);
-			this.tp_Decode.TabIndex = 1;
-			this.tp_Decode.Text = "Decode";
-			this.tp_Decode.UseVisualStyleBackColor = true;
+			this.btn_BrowseOutput1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_BrowseOutput1.Location = new System.Drawing.Point(410, 411);
+			this.btn_BrowseOutput1.Name = "btn_BrowseOutput1";
+			this.btn_BrowseOutput1.Size = new System.Drawing.Size(32, 23);
+			this.btn_BrowseOutput1.TabIndex = 7;
+			this.btn_BrowseOutput1.Text = "[B]";
+			this.btn_BrowseOutput1.UseVisualStyleBackColor = true;
 			// 
-			// btn_OpenImage
+			// tb_OutputFolder1
 			// 
-			this.btn_OpenImage.Location = new System.Drawing.Point(6, 19);
-			this.btn_OpenImage.Name = "btn_OpenImage";
-			this.btn_OpenImage.Size = new System.Drawing.Size(106, 23);
-			this.btn_OpenImage.TabIndex = 0;
-			this.btn_OpenImage.Text = "Open Image(s)";
-			this.btn_OpenImage.UseVisualStyleBackColor = true;
-			this.btn_OpenImage.Click += new System.EventHandler(this.btn_OpenImage_Click);
-			// 
-			// lv_ImagesList
-			// 
-			this.lv_ImagesList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+			this.tb_OutputFolder1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.lv_ImagesList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ch_Index,
-            this.ch_ImageName,
-            this.ch_Dimentions});
-			this.lv_ImagesList.Location = new System.Drawing.Point(6, 48);
-			this.lv_ImagesList.Name = "lv_ImagesList";
-			this.lv_ImagesList.Size = new System.Drawing.Size(238, 190);
-			this.lv_ImagesList.TabIndex = 1;
-			this.lv_ImagesList.UseCompatibleStateImageBehavior = false;
-			this.lv_ImagesList.View = System.Windows.Forms.View.Details;
+			this.tb_OutputFolder1.Location = new System.Drawing.Point(85, 413);
+			this.tb_OutputFolder1.Name = "tb_OutputFolder1";
+			this.tb_OutputFolder1.Size = new System.Drawing.Size(324, 20);
+			this.tb_OutputFolder1.TabIndex = 6;
 			// 
-			// ch_Index
+			// label1
 			// 
-			this.ch_Index.Text = "#";
-			this.ch_Index.Width = 29;
+			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(11, 416);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(77, 13);
+			this.label1.TabIndex = 5;
+			this.label1.Text = "Output Folder: ";
 			// 
-			// ch_ImageName
+			// btn_HideData
 			// 
-			this.ch_ImageName.Text = "Image";
-			this.ch_ImageName.Width = 124;
-			// 
-			// ch_Dimentions
-			// 
-			this.ch_Dimentions.Text = "Dimentions";
-			this.ch_Dimentions.Width = 76;
-			// 
-			// gb_Images
-			// 
-			this.gb_Images.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.gb_Images.Controls.Add(this.pb_Picture);
-			this.gb_Images.Controls.Add(this.btn_RemoveImage);
-			this.gb_Images.Controls.Add(this.btn_OpenImage);
-			this.gb_Images.Controls.Add(this.lv_ImagesList);
-			this.gb_Images.Location = new System.Drawing.Point(8, 6);
-			this.gb_Images.Name = "gb_Images";
-			this.gb_Images.Size = new System.Drawing.Size(438, 248);
-			this.gb_Images.TabIndex = 2;
-			this.gb_Images.TabStop = false;
-			this.gb_Images.Text = "Images";
-			// 
-			// btn_RemoveImage
-			// 
-			this.btn_RemoveImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_RemoveImage.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.btn_RemoveImage.Location = new System.Drawing.Point(210, 20);
-			this.btn_RemoveImage.Name = "btn_RemoveImage";
-			this.btn_RemoveImage.Size = new System.Drawing.Size(34, 23);
-			this.btn_RemoveImage.TabIndex = 2;
-			this.btn_RemoveImage.Text = "(-)";
-			this.btn_RemoveImage.UseVisualStyleBackColor = true;
-			// 
-			// pb_Picture
-			// 
-			this.pb_Picture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.pb_Picture.BackColor = System.Drawing.Color.DimGray;
-			this.pb_Picture.Location = new System.Drawing.Point(250, 48);
-			this.pb_Picture.Name = "pb_Picture";
-			this.pb_Picture.Size = new System.Drawing.Size(182, 190);
-			this.pb_Picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pb_Picture.TabIndex = 3;
-			this.pb_Picture.TabStop = false;
+			this.btn_HideData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_HideData.Location = new System.Drawing.Point(367, 450);
+			this.btn_HideData.Name = "btn_HideData";
+			this.btn_HideData.Size = new System.Drawing.Size(75, 23);
+			this.btn_HideData.TabIndex = 4;
+			this.btn_HideData.Text = "Hide Data";
+			this.btn_HideData.UseVisualStyleBackColor = true;
 			// 
 			// tc_Tabs_Data
 			// 
@@ -209,6 +162,28 @@
 			this.tp_Datatype_Text.Text = "Text";
 			this.tp_Datatype_Text.UseVisualStyleBackColor = true;
 			// 
+			// btn_BrowseDataText
+			// 
+			this.btn_BrowseDataText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_BrowseDataText.Location = new System.Drawing.Point(401, 6);
+			this.btn_BrowseDataText.Name = "btn_BrowseDataText";
+			this.btn_BrowseDataText.Size = new System.Drawing.Size(23, 104);
+			this.btn_BrowseDataText.TabIndex = 1;
+			this.btn_BrowseDataText.Text = "BROWSE";
+			this.btn_BrowseDataText.UseVisualStyleBackColor = true;
+			// 
+			// rtb_DataText
+			// 
+			this.rtb_DataText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.rtb_DataText.Location = new System.Drawing.Point(6, 6);
+			this.rtb_DataText.Name = "rtb_DataText";
+			this.rtb_DataText.Size = new System.Drawing.Size(391, 104);
+			this.rtb_DataText.TabIndex = 0;
+			this.rtb_DataText.Text = "";
+			// 
 			// tp_Datatype_Binary
 			// 
 			this.tp_Datatype_Binary.Location = new System.Drawing.Point(4, 22);
@@ -218,45 +193,6 @@
 			this.tp_Datatype_Binary.TabIndex = 1;
 			this.tp_Datatype_Binary.Text = "Binary";
 			this.tp_Datatype_Binary.UseVisualStyleBackColor = true;
-			// 
-			// btn_HideData
-			// 
-			this.btn_HideData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_HideData.Location = new System.Drawing.Point(367, 450);
-			this.btn_HideData.Name = "btn_HideData";
-			this.btn_HideData.Size = new System.Drawing.Size(75, 23);
-			this.btn_HideData.TabIndex = 4;
-			this.btn_HideData.Text = "Hide Data";
-			this.btn_HideData.UseVisualStyleBackColor = true;
-			// 
-			// label1
-			// 
-			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(11, 416);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(77, 13);
-			this.label1.TabIndex = 5;
-			this.label1.Text = "Output Folder: ";
-			// 
-			// tb_OutputFolder1
-			// 
-			this.tb_OutputFolder1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.tb_OutputFolder1.Location = new System.Drawing.Point(85, 413);
-			this.tb_OutputFolder1.Name = "tb_OutputFolder1";
-			this.tb_OutputFolder1.Size = new System.Drawing.Size(324, 20);
-			this.tb_OutputFolder1.TabIndex = 6;
-			// 
-			// btn_BrowseOutput1
-			// 
-			this.btn_BrowseOutput1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_BrowseOutput1.Location = new System.Drawing.Point(410, 411);
-			this.btn_BrowseOutput1.Name = "btn_BrowseOutput1";
-			this.btn_BrowseOutput1.Size = new System.Drawing.Size(32, 23);
-			this.btn_BrowseOutput1.TabIndex = 7;
-			this.btn_BrowseOutput1.Text = "[B]";
-			this.btn_BrowseOutput1.UseVisualStyleBackColor = true;
 			// 
 			// tp_Datatype_Morse
 			// 
@@ -278,27 +214,121 @@
 			this.tp_Datatype_BinaryText.Text = "Binary Text";
 			this.tp_Datatype_BinaryText.UseVisualStyleBackColor = true;
 			// 
-			// rtb_DataText
+			// gb_Images
 			// 
-			this.rtb_DataText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.gb_Images.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.gb_Images.Controls.Add(this.btn_Check);
+			this.gb_Images.Controls.Add(this.lbl_ImageInfo);
+			this.gb_Images.Controls.Add(this.pb_Picture);
+			this.gb_Images.Controls.Add(this.btn_RemoveImage);
+			this.gb_Images.Controls.Add(this.btn_OpenImage);
+			this.gb_Images.Controls.Add(this.lv_ImagesList);
+			this.gb_Images.Location = new System.Drawing.Point(8, 6);
+			this.gb_Images.Name = "gb_Images";
+			this.gb_Images.Size = new System.Drawing.Size(438, 248);
+			this.gb_Images.TabIndex = 2;
+			this.gb_Images.TabStop = false;
+			this.gb_Images.Text = "Images";
+			// 
+			// pb_Picture
+			// 
+			this.pb_Picture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.pb_Picture.BackColor = System.Drawing.Color.DimGray;
+			this.pb_Picture.Location = new System.Drawing.Point(269, 48);
+			this.pb_Picture.Name = "pb_Picture";
+			this.pb_Picture.Size = new System.Drawing.Size(163, 167);
+			this.pb_Picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pb_Picture.TabIndex = 3;
+			this.pb_Picture.TabStop = false;
+			// 
+			// btn_RemoveImage
+			// 
+			this.btn_RemoveImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_RemoveImage.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.btn_RemoveImage.Location = new System.Drawing.Point(229, 19);
+			this.btn_RemoveImage.Name = "btn_RemoveImage";
+			this.btn_RemoveImage.Size = new System.Drawing.Size(34, 23);
+			this.btn_RemoveImage.TabIndex = 2;
+			this.btn_RemoveImage.Text = "(-)";
+			this.btn_RemoveImage.UseVisualStyleBackColor = true;
+			this.btn_RemoveImage.Click += new System.EventHandler(this.btn_RemoveImage_Click);
+			// 
+			// btn_OpenImage
+			// 
+			this.btn_OpenImage.Location = new System.Drawing.Point(6, 19);
+			this.btn_OpenImage.Name = "btn_OpenImage";
+			this.btn_OpenImage.Size = new System.Drawing.Size(106, 23);
+			this.btn_OpenImage.TabIndex = 0;
+			this.btn_OpenImage.Text = "Open Image(s)";
+			this.btn_OpenImage.UseVisualStyleBackColor = true;
+			this.btn_OpenImage.Click += new System.EventHandler(this.btn_OpenImage_Click);
+			// 
+			// lv_ImagesList
+			// 
+			this.lv_ImagesList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.rtb_DataText.Location = new System.Drawing.Point(6, 6);
-			this.rtb_DataText.Name = "rtb_DataText";
-			this.rtb_DataText.Size = new System.Drawing.Size(391, 104);
-			this.rtb_DataText.TabIndex = 0;
-			this.rtb_DataText.Text = "";
+			this.lv_ImagesList.CheckBoxes = true;
+			this.lv_ImagesList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ch_Index,
+            this.ch_ImageName,
+            this.ch_Dimentions});
+			this.lv_ImagesList.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.lv_ImagesList.FullRowSelect = true;
+			this.lv_ImagesList.GridLines = true;
+			this.lv_ImagesList.Location = new System.Drawing.Point(6, 48);
+			this.lv_ImagesList.Name = "lv_ImagesList";
+			this.lv_ImagesList.Size = new System.Drawing.Size(257, 167);
+			this.lv_ImagesList.TabIndex = 1;
+			this.lv_ImagesList.UseCompatibleStateImageBehavior = false;
+			this.lv_ImagesList.View = System.Windows.Forms.View.Details;
+			this.lv_ImagesList.SelectedIndexChanged += new System.EventHandler(this.lv_ImagesList_SelectedIndexChanged);
 			// 
-			// btn_BrowseDataText
+			// ch_Index
 			// 
-			this.btn_BrowseDataText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_BrowseDataText.Location = new System.Drawing.Point(401, 6);
-			this.btn_BrowseDataText.Name = "btn_BrowseDataText";
-			this.btn_BrowseDataText.Size = new System.Drawing.Size(23, 104);
-			this.btn_BrowseDataText.TabIndex = 1;
-			this.btn_BrowseDataText.Text = "BROWSE";
-			this.btn_BrowseDataText.UseVisualStyleBackColor = true;
+			this.ch_Index.Text = "#";
+			this.ch_Index.Width = 29;
+			// 
+			// ch_ImageName
+			// 
+			this.ch_ImageName.Text = "Image";
+			this.ch_ImageName.Width = 144;
+			// 
+			// ch_Dimentions
+			// 
+			this.ch_Dimentions.Text = "Dimentions";
+			this.ch_Dimentions.Width = 76;
+			// 
+			// tp_Decode
+			// 
+			this.tp_Decode.Location = new System.Drawing.Point(4, 22);
+			this.tp_Decode.Name = "tp_Decode";
+			this.tp_Decode.Padding = new System.Windows.Forms.Padding(3);
+			this.tp_Decode.Size = new System.Drawing.Size(449, 479);
+			this.tp_Decode.TabIndex = 1;
+			this.tp_Decode.Text = "Decode";
+			this.tp_Decode.UseVisualStyleBackColor = true;
+			// 
+			// lbl_ImageInfo
+			// 
+			this.lbl_ImageInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.lbl_ImageInfo.AutoSize = true;
+			this.lbl_ImageInfo.Location = new System.Drawing.Point(7, 224);
+			this.lbl_ImageInfo.Name = "lbl_ImageInfo";
+			this.lbl_ImageInfo.Size = new System.Drawing.Size(32, 13);
+			this.lbl_ImageInfo.TabIndex = 4;
+			this.lbl_ImageInfo.Text = "INFO";
+			// 
+			// btn_Check
+			// 
+			this.btn_Check.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_Check.Location = new System.Drawing.Point(379, 219);
+			this.btn_Check.Name = "btn_Check";
+			this.btn_Check.Size = new System.Drawing.Size(54, 23);
+			this.btn_Check.TabIndex = 5;
+			this.btn_Check.Text = "Check";
+			this.btn_Check.UseVisualStyleBackColor = true;
 			// 
 			// Form1
 			// 
@@ -308,14 +338,15 @@
 			this.Controls.Add(this.tc_Tabs_Main);
 			this.Controls.Add(this.panel1);
 			this.Name = "Form1";
-			this.Text = "Form1";
+			this.Text = "ImageHide";
 			this.tc_Tabs_Main.ResumeLayout(false);
 			this.tp_Encode.ResumeLayout(false);
 			this.tp_Encode.PerformLayout();
-			this.gb_Images.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.pb_Picture)).EndInit();
 			this.tc_Tabs_Data.ResumeLayout(false);
 			this.tp_Datatype_Text.ResumeLayout(false);
+			this.gb_Images.ResumeLayout(false);
+			this.gb_Images.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pb_Picture)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -345,6 +376,8 @@
 		private System.Windows.Forms.TabPage tp_Datatype_BinaryText;
 		private System.Windows.Forms.Button btn_BrowseDataText;
 		private System.Windows.Forms.RichTextBox rtb_DataText;
+		private System.Windows.Forms.Label lbl_ImageInfo;
+		private System.Windows.Forms.Button btn_Check;
 	}
 }
 

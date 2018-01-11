@@ -1,0 +1,36 @@
+Image is transparency capable image format with uniformly 100% opacity (Alpha value of 255)
+message is converted to integer numbers and numbers and subtracted from the pixels Alpha value.
+
+
+
+HEADER:			(Line 1)
+	Message type?					->	INTEGER	1-255	->	1px			--	Indicates what type of data is contained in the message (So far 1 for cleartext, 2 for binary, 3 for morse, 4 for binary text)
+	How many pics?					->	INTEGER	1-255	->	1px			--	Indicates # of images used for whole message
+	Which pic is this?				->	INTEGER	1-255	->	1px			--	Indicates which image this is in line
+	Number of used rows?			->	INTEGER	1-1000	->	2px			--	Indicates how many rows are used to carry the message body between 1 and 1000 (or less if image is shorter)
+	Character index minimum?		->	INTEGER	0-255	->	1px			--	Indicates what the value is of the lowest character in the used character list 
+																			(eg: if only a-z is used than lowest char is a which is 97 or A which is 65)	http://www.asciitable.com/
+	
+MESSAGE BODY:	(Line 2 ->)
+	Number of used columns in row	->	INTEGER 1-1000	->	2px			--	Indicates how many characters appear in the current row of pixels
+	Bumper pixel					->	EMPTY	0		->	1px			--	Empty space with 0 value (Alpha 255)
+	Message text					->	CHAR	1-255	->	1-1000px	--	Messsage text between 1 and 100 characters long (or less if image is shorter)
+	
+	
+EXAMPLE (Single image containing message on 3 rows):
+
+	R	G	B	A		R	G	B	A		R	G	B	A		R	G	B	A		R	G	B	A		R	G	B	A		R	G	B	A		R	G	B	A		R	G	B	A		R	G	B	A		R	G	B	A		
+	
+	0					1					2					3					4					5					6					7					8					9					10
+
+0	100	10	200	254		112	30	33	254		111	110	200	254		220	110	200	252		100 111 200 255		113	200	222	255		?	?	?	255		?	?	?	255		?	?	?	255		?	?	?	255		?	?	?	255		
+
+1	111	200	222	250		113	111	40	255		50	100	76	225		2	2	2	234		2	7	111	222		88	110	7	234		99	54	170	250		110	100	99	255		100	30	220	255		?	?	?	255		?	?	?	255
+
+2	111	200	222	252		113	111	40	255		50	100	76	225		2	2	2	234		2	7	111	222		88	110	7	255		99	54	170	255		110	100	99	255		100	30	220	255		?	?	?	255		?	?	?	255
+
+3	111	200	222	249		113	111	40	255		50	100	76	225		2	2	2	234		2	7	111	222		88	110	7	234		99	54	170	250		110	100	99	220		100	30	220	255		?	?	?	255		?	?	?	255
+
+4	111	200	222	255		113	111	40	255		50	100	76	255		2	2	2	255		2	7	111	255		88	110	7	255		99	54	170	255		110	100	99	255		100	30	220	255		?	?	?	255		?	?	?	255
+
+5	...
