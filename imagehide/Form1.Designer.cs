@@ -43,6 +43,8 @@
 			this.tp_Datatype_Morse = new System.Windows.Forms.TabPage();
 			this.tp_Datatype_BinaryText = new System.Windows.Forms.TabPage();
 			this.gb_Images = new System.Windows.Forms.GroupBox();
+			this.btn_Check = new System.Windows.Forms.Button();
+			this.lbl_ImageInfo = new System.Windows.Forms.Label();
 			this.pb_Picture = new System.Windows.Forms.PictureBox();
 			this.btn_RemoveImage = new System.Windows.Forms.Button();
 			this.btn_OpenImage = new System.Windows.Forms.Button();
@@ -51,8 +53,6 @@
 			this.ch_ImageName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.ch_Dimentions = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.tp_Decode = new System.Windows.Forms.TabPage();
-			this.lbl_ImageInfo = new System.Windows.Forms.Label();
-			this.btn_Check = new System.Windows.Forms.Button();
 			this.tc_Tabs_Main.SuspendLayout();
 			this.tp_Encode.SuspendLayout();
 			this.tc_Tabs_Data.SuspendLayout();
@@ -105,6 +105,7 @@
 			this.btn_BrowseOutput1.TabIndex = 7;
 			this.btn_BrowseOutput1.Text = "[B]";
 			this.btn_BrowseOutput1.UseVisualStyleBackColor = true;
+			this.btn_BrowseOutput1.Click += new System.EventHandler(this.btn_BrowseOutput1_Click);
 			// 
 			// tb_OutputFolder1
 			// 
@@ -134,6 +135,7 @@
 			this.btn_HideData.TabIndex = 4;
 			this.btn_HideData.Text = "Hide Data";
 			this.btn_HideData.UseVisualStyleBackColor = true;
+			this.btn_HideData.Click += new System.EventHandler(this.btn_HideData_Click);
 			// 
 			// tc_Tabs_Data
 			// 
@@ -231,6 +233,27 @@
 			this.gb_Images.TabStop = false;
 			this.gb_Images.Text = "Images";
 			// 
+			// btn_Check
+			// 
+			this.btn_Check.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_Check.Location = new System.Drawing.Point(379, 219);
+			this.btn_Check.Name = "btn_Check";
+			this.btn_Check.Size = new System.Drawing.Size(54, 23);
+			this.btn_Check.TabIndex = 5;
+			this.btn_Check.Text = "Check";
+			this.btn_Check.UseVisualStyleBackColor = true;
+			this.btn_Check.Click += new System.EventHandler(this.btn_Check_Click);
+			// 
+			// lbl_ImageInfo
+			// 
+			this.lbl_ImageInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.lbl_ImageInfo.AutoSize = true;
+			this.lbl_ImageInfo.Location = new System.Drawing.Point(7, 224);
+			this.lbl_ImageInfo.Name = "lbl_ImageInfo";
+			this.lbl_ImageInfo.Size = new System.Drawing.Size(32, 13);
+			this.lbl_ImageInfo.TabIndex = 4;
+			this.lbl_ImageInfo.Text = "INFO";
+			// 
 			// pb_Picture
 			// 
 			this.pb_Picture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -266,6 +289,7 @@
 			// 
 			// lv_ImagesList
 			// 
+			this.lv_ImagesList.AllowDrop = true;
 			this.lv_ImagesList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -284,6 +308,8 @@
 			this.lv_ImagesList.UseCompatibleStateImageBehavior = false;
 			this.lv_ImagesList.View = System.Windows.Forms.View.Details;
 			this.lv_ImagesList.SelectedIndexChanged += new System.EventHandler(this.lv_ImagesList_SelectedIndexChanged);
+			this.lv_ImagesList.DragDrop += new System.Windows.Forms.DragEventHandler(this.lv_ImagesList_DragDrop);
+			this.lv_ImagesList.DragEnter += new System.Windows.Forms.DragEventHandler(this.lv_ImagesList_DragEnter);
 			// 
 			// ch_Index
 			// 
@@ -309,26 +335,6 @@
 			this.tp_Decode.TabIndex = 1;
 			this.tp_Decode.Text = "Decode";
 			this.tp_Decode.UseVisualStyleBackColor = true;
-			// 
-			// lbl_ImageInfo
-			// 
-			this.lbl_ImageInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.lbl_ImageInfo.AutoSize = true;
-			this.lbl_ImageInfo.Location = new System.Drawing.Point(7, 224);
-			this.lbl_ImageInfo.Name = "lbl_ImageInfo";
-			this.lbl_ImageInfo.Size = new System.Drawing.Size(32, 13);
-			this.lbl_ImageInfo.TabIndex = 4;
-			this.lbl_ImageInfo.Text = "INFO";
-			// 
-			// btn_Check
-			// 
-			this.btn_Check.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_Check.Location = new System.Drawing.Point(379, 219);
-			this.btn_Check.Name = "btn_Check";
-			this.btn_Check.Size = new System.Drawing.Size(54, 23);
-			this.btn_Check.TabIndex = 5;
-			this.btn_Check.Text = "Check";
-			this.btn_Check.UseVisualStyleBackColor = true;
 			// 
 			// Form1
 			// 
